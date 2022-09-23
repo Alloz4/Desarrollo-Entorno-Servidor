@@ -1,3 +1,4 @@
+<!--  Realizar un segunda versión del primer ejercicio donde la página de resultado tiene que mostrar una tabla con el siguiente  formato utilizando estilo.-->
 <!DOCTYPE html>
 <html lang="en">
 
