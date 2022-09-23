@@ -1,3 +1,4 @@
+<!-- Generar números al azar entre 1 y 10 hasta que se generen 3 veces el valor 6 de forma consecutiva en ese caso se mostrará cuantos número se han generado. -->
 <!DOCTYPE html>
 <html lang="en">
 
