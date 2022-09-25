@@ -1,14 +1,11 @@
-<?php 
+<?php
 
 $total = "12";
 $precio = 12;
 
-if($total = 0){
+if ($total = 0) {
     echo "Son iguales ";
-}else{
+} else {
     echo "Son diferentes ";
 }
 echo $total;
-
-
-?>
