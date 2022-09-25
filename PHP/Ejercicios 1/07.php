@@ -18,7 +18,7 @@ Pista: Utilizar  3 tablas con una fila del tamaño generado.
     $num2 = random_int(100, 500);
     $num3 = random_int(100, 500);
 
-    echo ('<table width=' . $num1 . '>
+    echo('<table width=' . $num1 . '>
       <tr>
          <td bgcolor="red">Rojo ( ' . $num1 . ' )</td>
       </tr>
