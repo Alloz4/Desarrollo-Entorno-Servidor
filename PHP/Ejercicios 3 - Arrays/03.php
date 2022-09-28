@@ -19,9 +19,9 @@
         "La Vanguardia" => "https://www.lavanguardia.com/"
     ];
 
-    $recomendado = array_rand($periodicos);
+    $periodico = array_rand($periodicos, 1);
 
-    echo "El medio recomendado es: " . $recomendado;
+    echo "El medio recomendado es: <a href='$periodicos[$periodico]'>$periodico</a>";
 
     ?>
 </body>
