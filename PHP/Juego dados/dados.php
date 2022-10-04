@@ -10,6 +10,7 @@
 
 <body>
     <?php
+    //Defino varias constantes para que el código se vea más limpio
     define("dado1", "&#9856;");
     define("dado2", "&#9857;");
     define("dado3", "&#9858;");
@@ -20,7 +21,7 @@
     define('GANA2', "¡Ha ganado el jugador 2!");
     define('EMPATE', "¡Empate!");
 
-
+    //Creo el array de los dados y le asign
     $dados = array(
         1 => dado1,
         2 => dado2,
@@ -29,7 +30,7 @@
         5 => dado5,
         6 => dado6
     );
-
+    //Creo la funcion tirar los dados, en ella creo un array auxiliar para meter números aleatorios y asi simular una tirada de dados real.
     function tirada()
     {
         $tirada = array();
@@ -39,7 +40,7 @@
         }
         return $tirada;
     }
-
+    //Creo la funcion puntuacion para saber el maximo, minimo y total
     function puntuacion($tirada)
     {
         $max = max($tirada);
@@ -50,6 +51,7 @@
 
         return $puntuacionTotal;
     }
+    //Creo la funcion mostrar dados para que muestre los emojis definidos arriba en las constantes. Le paso el array aleatorio y los dados para que devuelva los emojis y simule la tirada aleatoria.
     function mostrarDados($jugador, $dados)
     {
 
@@ -57,7 +59,7 @@
             echo $dados[$value];
         }
     }
-
+    //En esta funcion le paso las puntuaciones de cada tirada para ver quien es el ganador
     function jugadorGanador($puntuacion1, $puntuacion2)
     {
         if ($puntuacion1 > $puntuacion2) {
@@ -68,11 +70,13 @@
     }
     ?>
     <?php
+    //Asigno las funciones a determinadas variables.
     $jugador1 = tirada();
     $jugador2 = tirada();
     $puntuacion1 = puntuacion($jugador1);
     $puntuacion2 = puntuacion($jugador2);
     ?>
+    <!-- Creo una tabla en la que poner los datos para que todo quede orgamizado. -->
     <center>
         <h1>Cinco dados</h1>
         <p>Actualice la página para mostrar una nueva tirada</p>
