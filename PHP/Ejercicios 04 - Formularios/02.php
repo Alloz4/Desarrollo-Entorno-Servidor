@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="02.php" method="POST">
+    <form action="02.php" method="post">
         <p>Número 1: <input type="number" name="n1"></p>
         <p>Número 2: <input type="number" name="n2"></p>
         <p>Suma: <input type="submit" name="operador" value="+"></p>
@@ -23,12 +23,15 @@
         </p>
     </form>
     <?php
-    $n1 = $_POST["n1"];
-    $n2 = $_POST["n2"];
-    $operador = $_POST["operador"];
-    $resultadoSalida = $_POST["salida"];
-    $resultado = 0;
-    if (empty($n1) && empty($n2)) {
+    if ($_POST) {
+        $n1 = $_POST['n1'];
+        $n2 = $_POST['n2'];
+        $operador = $_POST['operador'];
+        $resultadoSalida = $_POST['salida'];
+        $resultado = 0;
+    }
+
+    if (empty($n1) || empty($n2)) {
         echo "No se han enviado datos";
     } else {
         switch ($operador) {
