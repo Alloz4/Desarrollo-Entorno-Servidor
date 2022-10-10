@@ -6,16 +6,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Formularios</title>
+    <style>
+        body {
+            margin-left: 20em;
+            margin-right: 20em;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .titulo {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            border-right: 1em solid gray;
+            border-left: 1em solid gray;
+            background-color: blue;
+            justify-content: center;
+        }
+
+        .formulario {
+            display: flex;
+            flex-wrap: wrap;
+            border-right: 1em solid gray;
+            border-left: 1em solid gray;
+            border-bottom: 1px solid black;
+            padding: 15px;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        input {
+            margin: 4px;
+        }
+
+        select {
+            margin: 4px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="titulo">
         <h1>FORMULARIOS CON CONTROLES HTML5 </h1>
     </div>
-    <form action="03.php" method="post">
-
-    </form>
+    <div class="formulario">
+        <form action="03.php" method="post">
+            <label> NUMERO 1: <input type="number" name="num"></label><br>
+            <label> NUMERO 2: 10 <input type="range" name=""> 100 </label><br>
+            <label> Estaciones: </label>
+            <select name="lista">
+                <option value="Primavera">Primavera</option>
+                <option value="Primavera">Verano</option>
+                <option value="Primavera">Otoño</option>
+                <option value="Primavera">Invierno</option>
+            </select><br>
+            <label> Color favorito: <input type="color" name="color"></label><br>
+            <label> Buscar: <input type="search" name="buscar"></label><br>
+            <label> Nombre: <input type="text" name="nombre"></label><br>
+            <label> Apellido: <input type="text" name="apellido"></label><br>
+            <label> E-mail: <input type="email" name="email"></label><br>
+            <label> Fecha de nacimiento: <input type="date" name="fecha"></label><br>
+            <label> Edad: <input type="number" name="edad" min="0" max="150"></label><br>
+            <label> Página personal: <input type="url" name="pagina"></label><br>
+            <label> Horario De <input type="time" name="desde"> a <input type="time" name="hasta"></label><br>
+            <input type="submit" name="enviar" value="Enviar consulta">
+        </form>
+    </div>
 </body>
 
 </html>
