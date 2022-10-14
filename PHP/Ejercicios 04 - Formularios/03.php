@@ -1,9 +1,9 @@
 <?php
 
 
-echo "<pre>";
+
 var_dump($_REQUEST);
-echo "</pre>";
+
 
 print "<pre>";
 print_r($_REQUEST);
