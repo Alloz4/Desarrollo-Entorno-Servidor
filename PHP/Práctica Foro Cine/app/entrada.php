@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>Nombre:</td>
-            <td> <input type="text" name="nombre" minlength="8" value="<?= (isset($_REQUEST['nombre'])) ? $_REQUEST['nombre'] : '' ?>"></td>
+            <td> <input type="text" name="nombre" value="<?= (isset($_REQUEST['nombre'])) ? $_REQUEST['nombre'] : '' ?>"></td>
         </tr>
         <tr>
             <td>Contraseña: </td>
