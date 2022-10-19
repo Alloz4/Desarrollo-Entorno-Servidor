@@ -9,7 +9,7 @@ body {
 #container {
   margin: 0 auto;
   width: 500px;
-  background:#fff;
+  background: #fff;
   border: solid 1px;
 }
 
@@ -25,6 +25,7 @@ body {
   font-size: 24px;
   margin: 0;
 }
+
 #header h2 {
   font-size: 20px;
   margin: 0;
@@ -37,7 +38,7 @@ body {
 }
 
 #content h2 {
-  color:#000;
+  color: #000;
   font-size: 160%;
   margin: 0 0 .5em;
 }
@@ -50,13 +51,16 @@ a {
   color: #429;
   text-decoration: none;
 }
+
 textarea {
-   resize: none;
+  resize: none;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 0px solid black;
-  border-collapse:collapse;
+  border-collapse: collapse;
   padding: 4px;
 }
 
