@@ -29,9 +29,9 @@
                         // Chequear usuario
                         if (
                             isset($_REQUEST['nombre']) && isset($_REQUEST['contraseña']) &&
-                            usuarioOK(checkInyeccionHtml($_REQUEST['nombre']), checkInyeccionHtml($_REQUEST['contraseña']))
+                            usuarioOK(($_REQUEST['nombre']), $_REQUEST['contraseña'])
                         ) {
-                            echo " Bienvenido <b>" . $_REQUEST['nombre'] . "</b><br>";
+                            echo " Bienvenido <b>" . checkInyeccionHtml($_REQUEST['nombre']) . "</b><br>";
                             include_once  'app/comentario.html';
                         } else {
                             include_once 'app/entrada.php';

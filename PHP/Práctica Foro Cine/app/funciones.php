@@ -10,7 +10,15 @@ function usuarioOk($usuario, $contraseña): bool
 
 function checkInyeccionHtml($cadena)
 {
-   $cadena = trim(htmlspecialchars($cadena));
+   $cadena = trim(htmlspecialchars($cadena, ENT_QUOTES, "UTF-8"));
 
    return $cadena;
+}
+
+function letraRepetida()
+{
+}
+
+function palabraRepetida()
+{
 }
