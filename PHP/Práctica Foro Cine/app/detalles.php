@@ -4,19 +4,19 @@
     <table>
         <tr>
             <td>Longitud: </td>
-            <td><?= strlen(($_REQUEST['comentario'])) ?></td>
+            <td><?= strlen(checkInyeccionHtml($_REQUEST['comentario'])) ?></td>
         </tr>
         <tr>
             <td>Nº de palabras: </td>
-            <td><?= str_word_count(checkInyeccionHtml($_REQUEST['comentario'])) ?></td>
+            <td><?= numPalabras(checkInyeccionHtml($_REQUEST['comentario'])) ?></td>
         </tr>
         <tr>
             <td>Letra + repetida: </td>
-            <td>a</td>
+            <td><?= (!empty($_REQUEST['comentario'])) ? letraRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
         </tr>
         <tr>
             <td>Palabra + repetida:</td>
-            <td>Hola</td>
+            <td><?= (!empty($_REQUEST['comentario'])) ? palabraRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
         </tr>
     </table>
 </div>
