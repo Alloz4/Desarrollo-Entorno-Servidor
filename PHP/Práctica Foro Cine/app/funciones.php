@@ -28,7 +28,7 @@ function numPalabras($comentario)
 }
 
 //Funcion en la que encontramos cual es la letra mas repetida.
-function letraRepetida($cadena)
+function letraMasRepetida($cadena)
 {
    //Creo una cadena con todas las letras del abecedario, concateno esa misma variable con las letras del abecedario en mayusculas
    $letras = "abcdefghijklmnopqrstuvwxyz";
@@ -52,7 +52,7 @@ function letraRepetida($cadena)
 }
 
 //Funcion en la que se busca cual es la palabra mas repetida del texto
-function palabraRepetida($cadena)
+function palabraMasRepetida($cadena)
 {
    //Convertimos la cadena en un array y almacenamos en una variable nueva un array asociativo del recuento de valores
    $arrayTexto = explode(' ', $cadena);

@@ -12,11 +12,11 @@
         </tr>
         <tr>
             <td>Letra + repetida: </td>
-            <td><?= (!empty($_REQUEST['comentario'])) ? letraRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
+            <td><?= (!empty($_REQUEST['comentario'])) ? letraMasRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
         </tr>
         <tr>
             <td>Palabra + repetida:</td>
-            <td><?= (!empty($_REQUEST['comentario'])) ? palabraRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
+            <td><?= (!empty($_REQUEST['comentario'])) ? palabraMasRepetida(checkInyeccionHtml($_REQUEST['comentario'])) : '' ?></td>
         </tr>
     </table>
 </div>
