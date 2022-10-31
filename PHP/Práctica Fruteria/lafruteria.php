@@ -15,7 +15,7 @@
     session_start();
 
     if ($_SERVER['REQUEST_METHOD'] == "GET" && empty($_GET['nombre'])) {
-        include 'login.php';
+        include 'registro.php';
     }
     if (($_SERVER['REQUEST_METHOD'] == "GET" && !empty($_GET['nombre']))) {
         $_SESSION['nombre'] = $_GET['nombre'];
