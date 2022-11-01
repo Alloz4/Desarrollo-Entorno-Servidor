@@ -12,11 +12,16 @@
     <h4>Este es su pedido: </h4>
     <table style="border: 1px solid black">
         <?php
-        foreach ($_SESSION['pedido'] as $key => $value) {
-            echo "<tr>";
-            echo "<td> $key  $value </td>";
-            echo "</tr>";
+        if (!empty($_SESSION['pedido'])) {
+            foreach ($_SESSION['pedido'] as $key => $value) {
+                echo "<tr>";
+                echo "<td> $key  $value </td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "No te llevas nada.";
         }
+
         ?>
     </table>
 </body>
