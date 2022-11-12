@@ -1,0 +1,3 @@
+marcos|admin|0294|4
+Ana Diáz|ana.diaz|123$%09|Jefa de Proyecto
+Eva|eva23|SDKFS23|Programadora junior
