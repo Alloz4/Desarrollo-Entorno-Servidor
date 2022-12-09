@@ -31,6 +31,7 @@ function mostrarDatos()
         $msg .= "</tr>\n";
     }
     $msg .= "</table>";
+    $msg .= "<br>";
 
     return $msg;
 }
