@@ -11,13 +11,13 @@
 <body>
     <div id="container">
         <div id="header">
-            <h1>Información de Clientes</h1>
+            <h1>GESTIÓN DE USUARIOS versión 1.1 + BD</h1>
         </div>
         <div id="content">
             <?= $contenido ?>
             <form>
-                <input type="submit" name="orden" value="Anterior">
-                <input type="submit" name="orden" value="Siguiente">
+                <input type="submit" name="orden" value="Nuevo">
+                <input type="submit" name="orden" value="Terminar">
             </form>
         </div>
     </div>
