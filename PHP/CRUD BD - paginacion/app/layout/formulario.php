@@ -17,30 +17,43 @@
             <form method="POST">
                 <table>
                     <tr>
-                        <td>Nombre </td>
+                        <td>ID</td>
                         <td>
-                            <input type="text" name="nombre" value="<?= $user->nombre ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size="20" autofocus>
+                            <input type="text" name="id" value="<?= $user->id ?>" <?= ($orden == "Detalles" || $orden == "Modificar") ? "readonly" : "" ?> size="20" autofocus>
                         </td>
                     </tr>
                     <tr>
-                        <td>Login </td>
+                        <td>First_name</td>
                         <td>
-                            <input type="text" name="login" value="<?= $user->login ?>" <?= ($orden == "Detalles" || $orden == "Modificar") ? "readonly" : "" ?> size="8">
+                            <input type="text" name="first_name" value="<?= $user->first_name ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size="8">
                         </td>
                     </tr>
                     <tr>
-                        <td>Contraseña </td>
+                        <td>Email</td>
                         <td>
-                            <input type="password" name="clave" value="<?= $user->password ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=10>
+                            <input type="text" name="email" value="<?= $user->email ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=10>
                         </td>
                     </tr>
                     <tr>
-                        <td>Comentario </td>
+                        <td>Gender</td>
                         <td>
-                            <input type="text" name="comentario" value="<?= $user->comentario ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=20>
+                            <input type="text" name="gender" value="<?= $user->gender ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=20>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ip_address</td>
+                        <td>
+                            <input type="text" name="ip_address" value="<?= $user->ip_address ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=20>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telefono</td>
+                        <td>
+                            <input type="text" name="telefono" value="<?= $user->telefono ?>" <?= ($orden == "Detalles") ? "readonly" : "" ?> size=20>
                         </td>
                     </tr>
                 </table>
+                <br>
                 <input type="submit" name="orden" value="<?= $orden ?>">
                 <input type="submit" name="orden" value="Volver">
             </form>

@@ -1,5 +1,5 @@
 <?php
-include_once "Usuario.php";
+include_once "cliente.php";
 
 function accionBorrar($login)
 {
@@ -7,19 +7,15 @@ function accionBorrar($login)
     $tuser = $db->borrarUsuario($login);
 }
 
-function accionTerminar()
-{
-    AccesoDatos::closeModelo();
-    session_destroy();
-}
-
 function accionAlta()
 {
-    $user = new Usuario();
-    $user->nombre  = "";
-    $user->login   = "";
-    $user->password   = "";
-    $user->comentario = "";
+    $user = new Cliente();
+    $user->id  = "";
+    $user->first_name  = "";
+    $user->email   = "";
+    $user->gender = "";
+    $user->ip_address = "";
+    $user->telefono = "";
     $orden = "Nuevo";
     include_once "layout/formulario.php";
 }
@@ -27,7 +23,7 @@ function accionAlta()
 function accionDetalles($login)
 {
     $db = AccesoDatos::getModelo();
-    $user = $db->getUsuario($login);
+    $user = $db->getCliente($login);
     $orden = "Detalles";
     include_once "layout/formulario.php";
 }
@@ -36,7 +32,7 @@ function accionDetalles($login)
 function accionModificar($login)
 {
     $db = AccesoDatos::getModelo();
-    $user = $db->getUsuario($login);
+    $user = $db->getCliente($login);
     $orden = "Modificar";
     include_once "layout/formulario.php";
 }
@@ -44,11 +40,14 @@ function accionModificar($login)
 function accionPostAlta()
 {
     limpiarArrayEntrada($_POST); //Evito la posible inyección de código
-    $user = new Usuario();
-    $user->nombre  = $_POST['nombre'];
-    $user->login   = $_POST['login'];
-    $user->password   = $_POST['clave'];
-    $user->comentario = $_POST['comentario'];
+    $user = new Cliente();
+    $user->id  = $_POST['id'];
+    $user->first_name  = $_POST['first_name'];
+    $user->email   = $_POST['email'];
+    $user->gender = $_POST['gender'];
+    $user->ip_address = $_POST['ip_address'];
+    $user->telefono = $_POST['telefono'];
+    header("Location: index.php");
     $db = AccesoDatos::getModelo();
     $db->addUsuario($user);
 }
@@ -56,11 +55,14 @@ function accionPostAlta()
 function accionPostModificar()
 {
     limpiarArrayEntrada($_POST); //Evito la posible inyección de código
-    $user = new Usuario();
-    $user->nombre  = $_POST['nombre'];
-    $user->login   = $_POST['login'];
-    $user->password  = $_POST['clave'];
-    $user->comentario = $_POST['comentario'];
+    $user = new Cliente();
+    $user->id  = $user->id  = $_POST['id'];
+    $user->first_name  = $_POST['first_name'];
+    $user->email   = $_POST['email'];
+    $user->gender = $_POST['gender'];
+    $user->ip_address = $_POST['ip_address'];
+    $user->telefono = $_POST['telefono'];
+    header("Location: index.php");
     $db = AccesoDatos::getModelo();
     $db->modUsuario($user);
 }

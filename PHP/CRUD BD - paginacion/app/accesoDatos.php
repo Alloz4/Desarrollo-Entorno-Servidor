@@ -1,5 +1,5 @@
 <?php
-include_once "usuario.php";
+include_once "cliente.php";
 include_once "config.php";
 
 /*
@@ -48,13 +48,19 @@ class AccesoDatos
         }
     }
 
+    public function numClientes(): int
+    {
+        $result = $this->dbh->query("SELECT id FROM Clientes");
+        $num = $result->num_rows;
+        return $num;
+    }
 
     // SELECT Devuelvo la lista de Usuarios
-    public function getUsuarios(): array
+    public function getClientes($primero, $cuantos): array
     {
         $tuser = [];
         // Crea la sentencia preparada
-        $stmt_usuarios  = $this->dbh->prepare("select * from Usuarios");
+        $stmt_usuarios  = $this->dbh->prepare("SELECT * FROM clientes limit $primero,$cuantos");
         // Si falla termian el programa
         if ($stmt_usuarios == false) die(__FILE__ . ':' . __LINE__ . $this->dbh->error);
         // Ejecuto la sentencia
@@ -64,7 +70,7 @@ class AccesoDatos
         // Si hay resultado correctos
         if ($result) {
             // Obtengo cada fila de la respuesta como un objeto de tipo Usuario
-            while ($user = $result->fetch_object('Usuario')) {
+            while ($user = $result->fetch_object('Cliente')) {
                 $tuser[] = $user;
             }
         }
@@ -73,11 +79,11 @@ class AccesoDatos
     }
 
     // SELECT Devuelvo un usuario o false
-    public function getUsuario(String $login)
+    public function getCliente(int $login)
     {
         $user = false;
 
-        $stmt_usuario   = $this->dbh->prepare("select * from Usuarios where login =?");
+        $stmt_usuario = $this->dbh->prepare("SELECT * FROM clientes WHERE id =?");
         if ($stmt_usuario == false) die($this->dbh->error);
 
         // Enlazo $login con el primer ? 
@@ -85,7 +91,7 @@ class AccesoDatos
         $stmt_usuario->execute();
         $result = $stmt_usuario->get_result();
         if ($result) {
-            $user = $result->fetch_object('Usuario');
+            $user = $result->fetch_object('Cliente');
         }
 
         return $user;
@@ -95,10 +101,10 @@ class AccesoDatos
     public function modUsuario($user): bool
     {
 
-        $stmt_moduser   = $this->dbh->prepare("update Usuarios set nombre=?, password=?, comentario=? where login=?");
+        $stmt_moduser = $this->dbh->prepare("UPDATE clientes set first_name=?, email=?, gender=?, ip_address=?, telefono=? where id=?");
         if ($stmt_moduser == false) die($this->dbh->error);
 
-        $stmt_moduser->bind_param("ssss", $user->nombre, $user->password, $user->comentario, $user->login);
+        $stmt_moduser->bind_param("ssssss", $user->first_name, $user->email, $user->gender, $user->ip_address, $user->telefono, $user->id);
         $stmt_moduser->execute();
         $resu = ($this->dbh->affected_rows  == 1);
         return $resu;
@@ -108,19 +114,19 @@ class AccesoDatos
     public function addUsuario($user): bool
     {
 
-        $stmt_creauser  = $this->dbh->prepare("insert into Usuarios (login,nombre,password,comentario) Values(?,?,?,?)");
+        $stmt_creauser  = $this->dbh->prepare("INSERT into clientes (id,first_name,email,gender,ip_address,telefono) Values(?,?,?,?,?,?)");
         if ($stmt_creauser == false) die($this->dbh->error);
 
-        $stmt_creauser->bind_param("ssss", $user->login, $user->nombre, $user->password, $user->comentario);
+        $stmt_creauser->bind_param("ssssss", $user->id, $user->first_name, $user->email, $user->gender, $user->ip_address, $user->telefono);
         $stmt_creauser->execute();
         $resu = ($this->dbh->affected_rows  == 1);
         return $resu;
     }
 
     //DELETE
-    public function borrarUsuario(String $login): bool
+    public function borrarUsuario(int $login): bool
     {
-        $stmt_boruser   = $this->dbh->prepare("delete from Usuarios where login =?");
+        $stmt_boruser   = $this->dbh->prepare("DELETE from clientes where id =?");
         if ($stmt_boruser == false) die($this->dbh->error);
 
         $stmt_boruser->bind_param("s", $login);

@@ -8,7 +8,7 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 700px;
+    width: 800px;
     background: #fff;
     border: solid 1px;
 }
@@ -34,7 +34,7 @@ body {
 #content {
     background: white;
     clear: left;
-    padding: 20px;
+    padding: 40px;
 }
 
 #content h2 {
@@ -71,7 +71,7 @@ th,
 td {
     border: 1px solid black;
     border-collapse: collapse;
-    padding: 4px;
+    padding: 1px;
 }
 
 #footer {

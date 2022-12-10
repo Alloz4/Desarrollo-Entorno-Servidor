@@ -5,36 +5,37 @@ include_once 'app/AccesoDatos.php';
 
 
 // MUESTRA TODOS LOS USUARIOS
-function mostrarDatos()
-{
+// function mostrarDatos($tuser)
+// {
 
-    $titulos = ["Nombre", "login", "Password", "Comentario"];
-    $msg = "<table>\n";
-    // Identificador de la tabla
-    $msg .= "<tr>";
-    for ($j = 0; $j < count($titulos); $j++) {
-        $msg .= "<th>$titulos[$j]</th>";
-    }
-    $msg .= "</tr>";
-    $auto = $_SERVER['PHP_SELF'];
-    $db = AccesoDatos::getModelo();
-    $tuser = $db->getUsuarios();
-    foreach ($tuser as $user) {
-        $msg .= "<tr>";
-        $msg .= "<td>$user->nombre</td>";
-        $msg .= "<td>$user->login</td>";
-        $msg .= "<td>$user->password</td>";
-        $msg .= "<td>$user->comentario</td>";
-        $msg .= "<td><a href=\"#\" onclick=\"confirmarBorrar('$user->nombre','$user->login');\" >Borrar</a></td>\n";
-        $msg .= "<td><a href=\"" . $auto . "?orden=Modificar&id=$user->login\">Modificar</a></td>\n";
-        $msg .= "<td><a href=\"" . $auto . "?orden=Detalles&id=$user->login\" >Detalles</a></td>\n";
-        $msg .= "</tr>\n";
-    }
-    $msg .= "</table>";
-    $msg .= "<br>";
+//     $titulos = ["ID", "First_name", "Email", "ip_address", "Telefono"];
+//     $msg = "<br>";
+//     $msg .= "<table>\n";
+//     // Identificador de la tabla
+//     $msg .= "<tr>";
+//     for ($j = 0; $j < count($titulos); $j++) {
+//         $msg .= "<th>$titulos[$j]</th>";
+//     }
+//     $msg .= "</tr>";
+//     $auto = $_SERVER['PHP_SELF'];
 
-    return $msg;
-}
+//     foreach ($tuser as $user) {
+//         $msg .= "<tr>";
+//         $msg .= "<td>$user->id</td>";
+//         $msg .= "<td>$user->first_name</td>";
+//         $msg .= "<td>$user->email</td>";
+//         $msg .= "<td>$user->ip_address</td>";
+//         $msg .= "<td>$user->telefono</td>";
+//         $msg .= "<td><a href=\"#\" onclick=\"confirmarBorrar('$user->first_name','$user->id');\" >Borrar</a></td>\n";
+//         $msg .= "<td><a href=\"" . $auto . "?orden=Modificar&id=$user->id\">Modificar</a></td>\n";
+//         $msg .= "<td><a href=\"" . $auto . "?orden=Detalles&id=$user->id\" >Detalles</a></td>\n";
+//         $msg .= "</tr>\n";
+//     }
+//     $msg .= "</table>";
+//     $msg .= "<br>";
+
+//     return $msg;
+// }
 
 /*
  *  Funciones para limpiar la entreda de posibles inyecciones
