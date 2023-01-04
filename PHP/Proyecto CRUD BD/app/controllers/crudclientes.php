@@ -26,6 +26,7 @@ function crudDetalles($id)
     include_once "app/views/detalles.php";
 }
 
+//Funciones de navegación en detalles
 function crudDetallesSiguiente($id)
 {
     $db = AccesoDatos::getModelo();
@@ -48,6 +49,12 @@ function crudDetallesAnterior($id)
     }
 }
 
+function crudDetallesImprimir($id)
+{
+    $db = AccesoDatos::getModelo();
+    $cli = $db->getCliente($id);
+    include_once "app/views/generarPDF.php";
+}
 
 function crudModificar($id)
 {
@@ -55,6 +62,30 @@ function crudModificar($id)
     $cli = $db->getCliente($id);
     $orden = "Modificar";
     include_once "app/views/formulario.php";
+}
+
+//Funciones de navegación en modificación
+
+function crudModificarSiguiente($id)
+{
+    $db = AccesoDatos::getModelo();
+    $cli = $db->getClienteSiguiente($id);
+    if ($cli) {
+        include_once "app/views/formulario.php";
+    } else {
+        crudModificar($id);
+    }
+}
+
+function crudModificarAnterior($id)
+{
+    $db = AccesoDatos::getModelo();
+    $cli = $db->getClienteAnterior($id);
+    if ($cli) {
+        include_once "app/views/formulario.php";
+    } else {
+        crudModificar($id);
+    }
 }
 
 function crudPostAlta()
