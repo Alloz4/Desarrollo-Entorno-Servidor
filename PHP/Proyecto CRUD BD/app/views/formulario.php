@@ -1,5 +1,5 @@
 <hr>
-<form method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     <table>
         <tr>
             <td>id:</td>
@@ -35,10 +35,14 @@
             <td>telefono:</td>
             <td><input type="tel" name="telefono" value="<?= $cli->telefono ?>"></td>
         </tr>
+        <tr>
+            <td>Foto de cliente:</td>
+            <td><input type="file" name="foto"></td>
+        </tr>
         </tr>
     </table>
     <br>
-    <input type="submit" name="orden" value="Modificar">
+    <input type="submit" name="orden" value="<?= $orden ?>">
     <input type="submit" name="orden" value="Volver">
     <br>
     <br>

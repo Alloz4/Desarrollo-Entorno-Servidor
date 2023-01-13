@@ -56,13 +56,13 @@ class AccesoDatos
     {
         if (self::$modelo != null) {
             $obj = self::$modelo;
-            $obj->stmt_numclientes->null;
-            $obj->stmt_clientes->null;
-            $obj->stmt_cliente->null;
-            $obj->stmt_modificar->null;
-            $obj->stmt_añadir->null;
-            $obj->stmt_borrar->null;
-            $obj->dbh->null;
+            $obj->stmt_numclientes = null;
+            $obj->stmt_clientes = null;
+            $obj->stmt_cliente = null;
+            $obj->stmt_modificar = null;
+            $obj->stmt_añadir = null;
+            $obj->stmt_borrar = null;
+            $obj->dbh = null;
             self::$modelo = null; // Borro el objeto.
         }
     }

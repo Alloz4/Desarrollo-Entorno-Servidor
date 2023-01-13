@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="container" style="width: 950px;">
+    <div id="container" style="width: 975px;">
         <div id="header">
             <h1>MIS CLIENTES CRUD versión 1.1</h1>
         </div>
