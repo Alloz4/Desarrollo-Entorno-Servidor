@@ -218,24 +218,6 @@ class AccesoDatos
         trigger_error('La clonación no permitida', E_USER_ERROR);
     }
 
-    function getClienteIp($ip)
-    {
-        $cli = false;
-
-        $stmt_usuario   = $this->dbh->prepare("select * from Clientes where ip_address =?");
-        if ($stmt_usuario == false) die($this->dbh->error);
-
-        // Enlazo $login con el primer ? 
-        $stmt_usuario->bind_param("s", $ip);
-        $stmt_usuario->execute();
-        $result = $stmt_usuario->get_result();
-        if ($result) {
-            $cli = $result->fetch_object('Cliente');
-        }
-
-        return $cli;
-    }
-
     function getClienteEmail($email)
     {
         $cli = false;
@@ -254,6 +236,7 @@ class AccesoDatos
         return $cli;
     }
 
+    // Devuelve el último id insertado en la Base de Datos.
 
     function getUltimoId()
     {
@@ -262,7 +245,6 @@ class AccesoDatos
         $stmt_usuario   = $this->dbh->prepare("SELECT AUTO_INCREMENT AS id FROM information_schema.Tables WHERE TABLE_SCHEMA='cliente' AND table_name='clientes'");
         if ($stmt_usuario == false) die($this->dbh->error);
 
-        // Enlazo $login con el primer ? 
         $stmt_usuario->execute();
         $result = $stmt_usuario->get_result();
         if ($result) {
@@ -270,5 +252,51 @@ class AccesoDatos
         }
 
         return $cli->id;
+    }
+
+
+    //Devuelve el usuario con el login y password indicados
+
+    function getUser($login, $password)
+    {
+        $user = false;
+        $stmt_usuario   = $this->dbh->prepare("select * from users where login =? and password =?");
+        if ($stmt_usuario == false) die($this->dbh->error);
+
+        // Enlazo $login con el primer ?
+        $stmt_usuario->bind_param("ss", $login, $password);
+        $stmt_usuario->execute();
+        $result = $stmt_usuario->get_result();
+
+        if (mysqli_num_rows($result) == 1) {
+            $user = true;
+        }
+
+        return $user;
+    }
+
+
+    //Devuelve el rol del usuario con el login indicado
+
+    function getRol($login)
+    {
+        // Devolver solo el rol del usuario
+
+        $rol = false;
+
+        $stmt_usuario   = $this->dbh->prepare("select rol from users where login =?");
+        if ($stmt_usuario == false) die($this->dbh->error);
+
+        // Enlazo $login con el primer ?
+
+        $stmt_usuario->bind_param("s", $login);
+        $stmt_usuario->execute();
+        $result = $stmt_usuario->get_result();
+
+        if ($result) {
+            $rol = $result->fetch_object();
+        }
+
+        return $rol->rol;
     }
 }

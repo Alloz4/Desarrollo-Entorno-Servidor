@@ -20,8 +20,6 @@
             <td><?= $valor->gender ?> </td>
             <td><?= $valor->ip_address ?> </td>
             <td><?= $valor->telefono ?> </td>
-            <td><a href="#" onclick="confirmarBorrar('<?= $valor->first_name ?>',<?= $valor->id ?>);">Borrar</a></td>
-            <td><a href="?orden=Modificar&id=<?= $valor->id ?>">Modificar</a></td>
             <td><a href="?orden=Detalles&id=<?= $valor->id ?>">Detalles</a></td>
 
         <tr>

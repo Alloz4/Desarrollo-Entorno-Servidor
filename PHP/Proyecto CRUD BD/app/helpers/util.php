@@ -18,3 +18,16 @@ function limpiarArrayEntrada(array &$entrada)
         $entrada[$key] = limpiarEntrada($value);
     }
 }
+
+function mostrarFlecha($campo)
+{
+    if ($_SESSION['ordenCampo'] == $campo) {
+        if ($_SESSION['ordenAscDesc'] == "ASC") {
+            return "<a style='color: blue;'>&nbsp;&nbsp;↑</a>";
+        } else {
+            return "<a style='color: blue;'>&nbsp;&nbsp;↓</a>";
+        }
+    } else {
+        return "";
+    }
+}

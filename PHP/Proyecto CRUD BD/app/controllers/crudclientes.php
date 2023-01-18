@@ -173,11 +173,7 @@ function crudPostAlta()
         $cli->email = "";
         $correcto = false;
     }
-    if (ipRepetida($cli->ip_address)) {
-        print "<p style='color: red;'>La IP ya existe en la base de datos.</p>";
-        $cli->ip_address = "";
-        $correcto = false;
-    }
+
     if (!ipCorrecta($cli->ip_address)) {
         print "<p style='color: red;'>La IP no tiene el formato correcto.</p>";
         $cli->ip_address = "";
@@ -232,6 +228,16 @@ function crudPostModificar()
         $cli->telefono = "";
         $correcto = false;
     }
+    if ($_POST['first_name'] == "") {
+        print "<p style='color: red;'>El nombre no puede estar vacío.</p>";
+        $cli->first_name = "";
+        $correcto = false;
+    }
+    if ($_POST['last_name'] == "") {
+        print "<p style='color: red;'>El apellido no puede estar vacío.</p>";
+        $cli->last_name = "";
+        $correcto = false;
+    }
 
     if ($correcto) {
         subirFoto($cli->id);
@@ -257,20 +263,6 @@ function ipCorrecta($ip)
     }
 
     return $formato;
-}
-
-//Funcion para ver si la ip esta repetido
-
-function ipRepetida($ip)
-{
-    $db = AccesoDatos::getModelo();
-    $cli = $db->getClienteIp($ip);
-    if ($cli) {
-        return true;
-        echo "La ip ya existe";
-    } else {
-        return false;
-    }
 }
 
 //Funcion para ver si el email esta repetido
@@ -326,5 +318,31 @@ function subirFoto($id)
         } else {
             echo "El formato no es el correcto";
         }
+    }
+}
+
+//Funcion para comprobar el usuario y la contraseña en la base de datos
+
+function comprobarUsuario($usuario, $contrasena)
+{
+    $db = AccesoDatos::getModelo();
+    $usu = $db->getUser($usuario, $contrasena);
+    if ($usu) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Funcion para comprobar el rol del usuario
+
+function comprobarRol($usuario)
+{
+    $db = AccesoDatos::getModelo();
+    $usu = $db->getRol($usuario);
+    if ($usu) {
+        return $usu;
+    } else {
+        return false;
     }
 }

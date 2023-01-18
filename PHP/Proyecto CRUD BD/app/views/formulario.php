@@ -4,6 +4,9 @@
         <tr>
             <td>id:</td>
             <td><input type="number" name="id" value="<?= $cli->id ?>" readonly></td>
+            <td rowspan="8">
+                <?= mostrarFoto($cli->id); ?>
+            </td>
         </tr>
         </tr>
         <tr>
