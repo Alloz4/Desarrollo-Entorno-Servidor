@@ -70,14 +70,10 @@ function accionIncrementarSaldo($seleccionados)
 {
     $db = AccesoDatos::getModelo();
     $user = $db->incrementarSaldo($seleccionados);
-    $orden = "IncrementarSaldo";
-    include_once "index.php";
 }
 
 function accionBloqueo($seleccionados)
 {
     $db = AccesoDatos::getModelo();
     $user = $db->bloquearUsuario($seleccionados);
-    $orden = "Bloqueo";
-    include_once "index.php";
 }
