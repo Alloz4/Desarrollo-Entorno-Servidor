@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>cursojavaee</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>ConfigurableServlet</servlet-name>
+		<servlet-class>tema5.ConfigurableServlet</servlet-class>
+		<init-param>
+			<param-name>parametro1XML</param-name>
+			<param-value>Valor1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>parametro2XML</param-name>
+			<param-value>Valor2</param-value>
+		</init-param>
+	</servlet>
+	
+	
+    <!--Comienzo configuracion del tema 7-->
+    <servlet>
+        <servlet-name>AutenticacionServlet</servlet-name>
+        <servlet-class>tema7.AutenticacionServlet</servlet-class>
+        <init-param>
+            <!--Parametro de configuración; el archivo que contiene el password de administrador-->
+            <param-name>ficheroUsuarios</param-name>
+            <param-value>/tema7/ficheroUsuarios.prop</param-value>
+        </init-param>
+    </servlet>
+	
+	<!--Comienzo configuracion del tema 8-->
+    <servlet>
+        <servlet-name>ExceptionServlet</servlet-name>
+        <servlet-class>tema8.ExceptionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExceptionServlet</servlet-name>
+        <url-pattern>/ExceptionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GestorDeExcepcionesServlet</servlet-name>
+        <servlet-class>tema8.GestorDeExcepcionesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestorDeExcepcionesServlet</servlet-name>
+        <url-pattern>/GestorDeExcepcionesServlet</url-pattern>
+    </servlet-mapping>
+    <!--Declaramos el recurso que va a gestionar errores http 404-->
+    <error-page>
+        <error-code>404</error-code>
+        <!--En este caso, el recurso va a ser una página HTML estatica-->
+        <location>/tema8/404error.html</location>
+    </error-page>
+    <!--Declaramos el recurso que va a gestionar errores http 500-->
+    <error-page>
+        <error-code>500</error-code>
+        <!--En este caso, el recurso va a ser una página HTML estatica-->
+        <location>/tema8/500error.html</location>
+    </error-page>
+    <!--Declaramos el recurso que va a gestionar NullPointerExceptions en el codigo Java-->
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <!--En este caso, el recurso va a ser Servlet-->
+        <location>/GestorDeExcepcionesServlet</location>
+    </error-page>
+    <!--Declaramos el recurso que va a gestionar NullPointerExceptions en el codigo Java-->
+    <error-page>
+        <exception-type>java.lang.NumberFormatException</exception-type>
+        <!--En este caso, el recurso va a ser Servlet-->
+        <location>/GestorDeExcepcionesServlet</location>
+    </error-page>
+    <!--Fin configuracion del tema 8-->
+	
+	
+</web-app>

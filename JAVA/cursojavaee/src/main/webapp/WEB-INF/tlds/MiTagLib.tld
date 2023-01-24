@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>newtag_library</short-name>
+    
+    <uri>MiLibreriaDeTags</uri>
+    <tag>
+        <name>holamundo</name>
+        <tag-class>tema13.HolaMundoTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>texto</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>repeticiones</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+</taglib>
