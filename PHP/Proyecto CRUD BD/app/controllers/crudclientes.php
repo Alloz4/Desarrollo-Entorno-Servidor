@@ -212,7 +212,7 @@ function crudPostModificar()
 
     $correcto = true;
 
-    if (emailRepetido($cli->email)) {
+    if (emailRepetidoModificar($cli->email, $cli->id)) {
         print "<p style='color: red;'>El email ya existe en la base de datos.</p>";
         $cli->email = "";
         $correcto = false;
@@ -265,7 +265,7 @@ function ipCorrecta($ip)
     return $formato;
 }
 
-//Funcion para ver si el email esta repetido
+//Funcion para ver si el email esta repetido en el alta
 
 function emailRepetido($email)
 {
@@ -273,7 +273,23 @@ function emailRepetido($email)
     $cli = $db->getClienteEmail($email);
     if ($cli) {
         return true;
-        echo "El email ya existe";
+    } else {
+        return false;
+    }
+}
+
+//Funcion para ver si el email esta repetido en modificar salvo en el cliente que se está modificando actualmente
+
+function emailRepetidoModificar($email, $id)
+{
+    $db = AccesoDatos::getModelo();
+    $cli = $db->getClienteEmail($email);
+    if ($cli) {
+        if ($cli->id == $id) {
+            return false;
+        } else {
+            return true;
+        }
     } else {
         return false;
     }
