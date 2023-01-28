@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>cursojavaee</name>
+	<name>EjerciciosJavaEE</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1674902026956</id>
+			<id>1674902026935</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
