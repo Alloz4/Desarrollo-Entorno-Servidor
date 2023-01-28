@@ -19,6 +19,7 @@ function limpiarArrayEntrada(array &$entrada)
     }
 }
 
+// Función para mostrar la flecha de ordenación en la cabecera de la tabla
 function mostrarFlecha($campo)
 {
     if ($_SESSION['ordenCampo'] == $campo) {
