@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddeaee77-15de-4a7b-914e-d53869b7916b" name="Changes" comment="" />
+    <list default="true" id="ddeaee77-15de-4a7b-914e-d53869b7916b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/EjemJDBC4/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/EjemJDBC4/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/EjemJDBC4/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/EjemJDBC4/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Ejercicio01/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/Ejercicio01/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Ejercicio01/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/Ejercicio01/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Ejercicios JSP/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/Ejercicios JSP/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Ejercicios JSP/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/Ejercicios JSP/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/EjerciciosJavaEE/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/EjerciciosJavaEE/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/EjerciciosJavaEE/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/EjerciciosJavaEE/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/MVCbasico/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/MVCbasico/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/MVCbasico/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/MVCbasico/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/ProductosMVC/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/ProductosMVC/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/ProductosMVC/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/ProductosMVC/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/catalina.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/Servers/Tomcat v8.0 Server at localhost-config/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/UsuariosMVC/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/UsuariosMVC/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/UsuariosMVC/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/UsuariosMVC/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/controljava/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/controljava/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/controljava/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/controljava/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/controljava/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/controljava/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/cursojavaee/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/cursojavaee/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/cursojavaee/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/cursojavaee/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/.jsdtscope" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.wst.common.component" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/src/main/java/ProcesarParametro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/src/main/java/prueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/src/main/webapp/Formulario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/prueba/src/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,14 +62,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Desarrollo Entorno Servidor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/htdocs/Desarrollo Entorno Servidor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +86,9 @@
       <updated>1664124877901</updated>
       <workItem from="1664124879245" duration="27000" />
       <workItem from="1664124919643" duration="211000" />
+      <workItem from="1676289971297" duration="36000" />
+      <workItem from="1676931595797" duration="49000" />
+      <workItem from="1677112402442" duration="423000" />
     </task>
     <servers />
   </component>
