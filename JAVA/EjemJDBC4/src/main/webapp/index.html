@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TiendaLibros</title>
+</head>
+<body>
+<h2> Consulta mediante distintos métodos de conexión </h2>
+<form method="get" action="./Control">
+<b>Elige un autor:</b>
+<input type="radio" name="autor" value="Alvaro Garcia">Alvaro Garcia
+<input type="radio" name="autor" value="Aleksa Vukotic">Aleksa Vukotic
+<input type="radio" name="autor" value="Giulio Zambon">Giulio Zambon
+<br>
+<input type="radio" name="metodo" value="1">Consulta Básica
+<br>
+<input type="radio" name="metodo" value="2">Consulta - conexión Init (acceso sincronizado)
+<br>
+<input type="radio" name="metodo" value="3">Consulta - conexión init + sentencia precompilada (acceso sincronizado)
+<br>
+<input type="radio" name="metodo" value="4">Consulta - pool de conexiones (context.xml del servidor Tomcat)
+<br>
+<input type="submit" value="Buscar">
+</form>
+</body>
+</html>

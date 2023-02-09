@@ -1,0 +1,10 @@
+
+Para trabaja con el pool tenemos que incluir el contexto de servidor Tomcat (context.xml) 
+un recursos asociado a la conexión a la base de datos:
+
+Ejemplo:
+
+<Resource name="jdbc/mysql_tiendalibros" auth="Container" type="javax.sql.DataSource"
+     maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true"
+     username="root" password="root" driverClassName="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost/TiendaLibros" />
