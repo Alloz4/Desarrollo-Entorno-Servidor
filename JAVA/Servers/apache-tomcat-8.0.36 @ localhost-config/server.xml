@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="ProductosMVC" path="/ProductosMVC" reloadable="true" source="org.eclipse.jst.jee.server:ProductosMVC"/><Context docBase="ecomercio4" path="/ecomercio4" reloadable="true" source="org.eclipse.jst.jee.server:ecomercio4"/><Context docBase="ecomercio" path="/ecomercio" reloadable="true" source="org.eclipse.jst.jee.server:ecomercio"/><Context docBase="ElectroncarMarcos" path="/ElectroncarMarcos" reloadable="true" source="org.eclipse.jst.jee.server:ElectroncarMarcos"/><Context docBase="Electroncar" path="/Electroncar" reloadable="true" source="org.eclipse.jst.jee.server:Electroncar"/></Host>
+      <Context docBase="ProductosMVC" path="/ProductosMVC" reloadable="true" source="org.eclipse.jst.jee.server:ProductosMVC"/><Context docBase="ecomercio" path="/ecomercio" reloadable="true" source="org.eclipse.jst.jee.server:ecomercio"/><Context docBase="ElectroncarMarcos" path="/ElectroncarMarcos" reloadable="true" source="org.eclipse.jst.jee.server:ElectroncarMarcos"/><Context docBase="Electroncar" path="/Electroncar" reloadable="true" source="org.eclipse.jst.jee.server:Electroncar"/></Host>
     </Engine>
   </Service>
 </Server>
