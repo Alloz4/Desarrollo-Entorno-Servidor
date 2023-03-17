@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddeaee77-15de-4a7b-914e-d53869b7916b" name="Changes" comment="CRUD de Usuarios">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ddeaee77-15de-4a7b-914e-d53869b7916b" name="Changes" comment="CRUD de Usuarios" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +34,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -54,6 +52,7 @@
       <workItem from="1676931595797" duration="49000" />
       <workItem from="1677112402442" duration="1064000" />
       <workItem from="1677401189574" duration="93000" />
+      <workItem from="1678980786926" duration="2033000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD de Usuarios">
       <created>1677112848654</created>
