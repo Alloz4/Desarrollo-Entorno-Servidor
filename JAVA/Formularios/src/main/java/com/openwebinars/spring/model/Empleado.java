@@ -1,9 +1,14 @@
 package com.openwebinars.spring.model;
 
+import jakarta.validation.constraints.*;
+
 public class Empleado {
 
+	@Min(value=0, message="{empleado.id.mayorquecero}")
 	private long id;
+	@NotEmpty
 	private String nombre;
+	@Email
 	private String email;
 	private String telefono;
 

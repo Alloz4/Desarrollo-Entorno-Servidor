@@ -51,12 +51,18 @@
 			<h1>Nuevo empleado</h1>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8">
-					<form method="post" action="#" th:action="@{/empleado/new/submit}"
+					<form method="post" action="#"
+						th:action="${empleadoForm.id != 0} ? @{/empleado/edit/submit} : @{/empleado/new/submit}"
 						th:object="${empleadoForm}">
-						<h1>Nuevo empleado</h1>
-						<div class="form-group">
+						<h1
+							th:text="${empleadoForm.id != 0} ? 'Editar empleado' : 'Nuevo empleado'"></h1>
+						<div class="form-group"
+							th:classappend="${#fields.hasErrors('id')} ? 'has-error'">
 							<label for="id">ID</label> <input type="text"
-								class="form-control" id="id" placeholder="1" th:field="*{id}">
+								class="form-control" id="id" placeholder="1" th:field="*{id}"
+								th:attrappend="readonly=${empleadoForm.id != 0} ? 'readonly' : null">
+							<span th:if="${#fields.hasErrors('id')}" th:errors="*{id}"
+								class="help-block" id="id-error">Errores</span>
 						</div>
 
 						<div class="form-group">
