@@ -19,6 +19,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectId" id="2FGiZaxZI8vXiXAeqL28Jy0IBpT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,11 +30,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/34670/Desktop/1º DAW/JAVA eclipse",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
@@ -53,6 +56,7 @@
       <workItem from="1677112402442" duration="1064000" />
       <workItem from="1677401189574" duration="93000" />
       <workItem from="1678980786926" duration="2033000" />
+      <workItem from="1681038886866" duration="1004000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD de Usuarios">
       <created>1677112848654</created>
