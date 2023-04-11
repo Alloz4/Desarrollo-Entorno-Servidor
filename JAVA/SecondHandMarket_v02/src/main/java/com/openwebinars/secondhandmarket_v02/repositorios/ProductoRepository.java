@@ -1,4 +1,4 @@
-package com.openwebinars.secondhandmarket_v02.respositorios;
+package com.openwebinars.secondhandmarket_v02.repositorios;
 
 import com.openwebinars.secondhandmarket_v02.modelo.Compra;
 import com.openwebinars.secondhandmarket_v02.modelo.Producto;
