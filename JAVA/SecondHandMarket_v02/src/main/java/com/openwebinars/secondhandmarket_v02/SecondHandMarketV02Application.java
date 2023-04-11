@@ -2,6 +2,9 @@ package com.openwebinars.secondhandmarket_v02;
 
 import com.openwebinars.secondhandmarket_v02.modelo.Producto;
 import com.openwebinars.secondhandmarket_v02.modelo.Usuario;
+import com.openwebinars.secondhandmarket_v02.servicios.ProductoServicio;
+import com.openwebinars.secondhandmarket_v02.servicios.UsuarioServicio;
+import com.openwebinars.secondhandmarket_v02.upload.StorageService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
