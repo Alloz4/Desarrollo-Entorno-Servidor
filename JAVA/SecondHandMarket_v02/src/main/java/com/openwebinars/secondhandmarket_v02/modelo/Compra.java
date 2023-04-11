@@ -1,11 +1,10 @@
 package com.openwebinars.secondhandmarket_v02.modelo;
 
 import java.util.Date;
-
-import jakarta.persistence.*;
-
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)

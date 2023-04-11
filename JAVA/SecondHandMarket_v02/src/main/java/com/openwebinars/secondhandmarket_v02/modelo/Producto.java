@@ -1,11 +1,15 @@
 package com.openwebinars.secondhandmarket_v02.modelo;
 
-import jakarta.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Producto {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
     private String nombre;

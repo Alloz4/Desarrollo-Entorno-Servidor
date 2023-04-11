@@ -1,13 +1,18 @@
 package com.openwebinars.secondhandmarket_v02.modelo;
 
-import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.repository.Temporal;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
 public class Usuario {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
     private String nombre;
@@ -15,7 +20,6 @@ public class Usuario {
     private String avatar;
 
     @CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
     private Date fechaAlta;
 
     private String email;
